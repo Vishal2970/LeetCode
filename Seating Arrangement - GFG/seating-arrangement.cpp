@@ -7,7 +7,6 @@ using namespace std;
 
 // } Driver Code Ends
 //User function Template for C++
-
 class Solution{
     public:
     bool is_possible_to_get_seats(int n, int m, vector<int>& seats){
