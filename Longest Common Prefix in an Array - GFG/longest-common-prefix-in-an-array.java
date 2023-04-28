@@ -27,25 +27,20 @@ class GFG
 
 class Solution{
     String longestCommonPrefix(String arr[], int n){
-        String ans=arr[0];
-        for(int i=1;i<n;i++){
-            ans=(common(ans,arr[i]));
-        }
-        if(ans.length()==0){
-            return "-1";
-        }
-        return ans;
-    }
-    static String common(String s1, String s2){
-        StringBuilder sb=new StringBuilder();
-        int n=Math.min(s1.length(),s2.length());
-        for(int i=0;i<n;i++){
+        // code here
+        Arrays.sort(arr);
+        String ans="";
+        String s1=arr[0];
+        String s2=arr[arr.length-1];
+        int l=Math.min(s1.length(),s2.length());
+        for(int i=0;i<l;i++){
+            if(s1.charAt(0)!=s2.charAt(0)){
+                return "-1";
+            }
             if(s1.charAt(i)==s2.charAt(i)){
-                sb.append(s1.charAt(i));
-            }else{
-                break;
+                ans+=s1.charAt(i);
             }
         }
-        return sb.toString();
+        return ans;
     }
 }
