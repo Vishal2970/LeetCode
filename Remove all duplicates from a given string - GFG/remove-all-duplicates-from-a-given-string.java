@@ -30,14 +30,14 @@ public class Main {
 class Solution {
     String removeDuplicates(String str) {
         // code here
-        String ans="";
-        for(int i=0;i<str.length();i++){
-            char c=str.charAt(i);
-            if (ans.indexOf(c)<0){
-                ans+=c;
+        String s="";
+        char[]arr=str.toCharArray();
+        for (char c:arr){
+            if (s.indexOf(c)<0) {
+                s+=c;
             }
         }
-        return ans;
+        return s;
     }
 }
 
