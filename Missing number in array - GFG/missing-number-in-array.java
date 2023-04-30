@@ -29,12 +29,11 @@ class GFG {
 
 class Solution {
     int MissingNumber(int array[], int n) {
-        
-        Arrays.sort(array);
+        int sum=n*(n+1)/2;
+        int aSum=0;
         for(int i=0;i<array.length;i++){
-            if(array[i]!=i+1)
-            return i+1;
+            aSum+=array[i];
         }
-        return n;
+        return sum-aSum;
     }
 }
