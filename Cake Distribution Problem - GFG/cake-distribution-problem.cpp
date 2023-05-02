@@ -30,7 +30,6 @@ int maxSweetness(vector<int>& sweetness, int N, int K) {
 }
 };
 
-
 //{ Driver Code Starts.
 
 int main() {
